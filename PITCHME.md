@@ -41,6 +41,9 @@ OSC messages all have an address and a series of parameters, and they look like 
 
 ```
 /mymixer/slider/1 127
+```
+
+```
 /mymixer/knob/2 64
 ```
 
