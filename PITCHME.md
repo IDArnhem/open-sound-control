@@ -16,7 +16,7 @@ It allows you to send data from one program to another. Really fast and very eas
 ## Open Sound Control
 - very broadly supported (most programming languages have OSC implementations and most software for real-time digital content supports OSC)
 - easy to debug (so you spend less time trying to find mistakes)
-
+- allows you to design your own protocol
 ---
 ## OSC applications
 - Real-time sensor interfaces
@@ -78,9 +78,9 @@ Out of which one example would be this message we saw before:
 ---
 ### Love OSC because...
 
-There are many reasons to love OSC, but by far the one reason I find relevant to you is that
-it allows you to decouple the interaction from the result of that interaction. Enabling you to
-test different interactions quickly without having to change the outcome. So it nables two design/make processes to be made in parallel, potentially by different people. All they have to do is agree on the protocol.
+There are many reasons to love OSC, but by far the one reason I find relevant to us is that
+it allows us to decouple the interaction from the result of that interaction. Enabling us to
+test different interactions quickly without having to change the outcome. So it nables two design/make processes to be made in parallel, potentially by different people. All they have to do is agree on the protocol or _message map_.
 ---
 ### Love OSC because...
 
