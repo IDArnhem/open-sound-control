@@ -6,13 +6,13 @@ import netP5.*;
 OscP5 oscp5;
 NetAddress dest;
 
-int OSC_LISTEN_ON = 54321;
 int OSC_SEND_TO = 12345;
 
 // this IP address connects to same computer
 String destination = "127.0.0.1";
 
-// this is the broadcast IP
+// this is the broadcast IP it will send the message to 
+// all computers in the 192.168.8.xx network.
 //String destination = "192.168.8.255";
 
 
@@ -26,17 +26,20 @@ int kindex;
 void setup() {
   size(400, 300);
   
-  // start oscP5, listening for incoming messages at port 12000
-  oscp5 = new OscP5(this, OSC_LISTEN_ON);
+  // start oscP5, listening for incoming messages at port in number
+  oscp5 = new OscP5(this, 54321);
   dest = new NetAddress(destination, OSC_SEND_TO);
 
+  // create a buffer to store calculation of blowing strength
   kfactor = new float[width];
   
+  // initialize the audio part
   minim = new Minim(this);  // this initializes the audio engine
   in = minim.getLineIn();  // this captures microphone input
   fft = new FFT(in.bufferSize(), in.sampleRate()); // this performs analysis on the frequency domain
 }
 
+// dispatch the message as an OSC message
 void osc_dispatch_value(float val) {
   OscMessage msg = new OscMessage("/blowforce");
   msg.add(val); // add a parameter to our message
