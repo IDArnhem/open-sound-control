@@ -12,8 +12,11 @@ It allows you to send data from one program to another. Really fast and very eas
 - is symbolic (you can send messages that aren't just a binary jumble)
 - very easy to use and learn
 - OSC messages are human-readable
+---
+## Open Sound Control
 - very broadly supported (most programming languages have OSC implementations and most software for real-time digital content supports OSC)
 - easy to debug (so you spend less time trying to find mistakes)
+
 ---
 ## OSC applications
 - Real-time sensor interfaces
